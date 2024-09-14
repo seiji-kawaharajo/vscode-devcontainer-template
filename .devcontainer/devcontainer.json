@@ -1,0 +1,82 @@
+{
+  "name": "proj-soltech_web",
+  "image": "mcr.microsoft.com/devcontainers/base:alpine",
+  "containerEnv": {
+    "TZ": "Asia/Tokyo"
+  },
+  "runArgs": ["--init"],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.encoding": "utf8",
+        "files.eol": "\n",
+        "editor.renderWhitespace": "all",
+        "workbench.iconTheme": "material-icon-theme",
+        "files.trimTrailingWhitespace": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        // Todo Tree
+        "todo-tree.general.tags": [
+          "TODO",
+          "ToDo",
+          "todo",
+          "BUG",
+          "bug",
+          "FIXME",
+          "fixme",
+          "FIX",
+          "fix",
+          "NOTE",
+          "note"
+        ],
+        "todo-tree.general.tagGroups": {
+          "TODO": ["ToDo", "todo"],
+          "BUG": ["bug"],
+          "FIXME": ["fixme", "FIX", "fix"],
+          "NOTE": ["note"]
+        },
+        "todo-tree.highlights.defaultHighlight": {
+          "gutterIcon": true
+        },
+        "todo-tree.highlights.customHighlight": {
+          "TODO": {
+            "icon": "check-circle-fill",
+            "foreground": "orange",
+            "iconColour": "orange"
+          },
+          "BUG": {
+            "icon": "bug",
+            "foreground": "red",
+            "iconColour": "red"
+          },
+          "FIXME": {
+            "icon": "flame",
+            "foreground": "yellow",
+            "iconColour": "yellow"
+          },
+          "NOTE": {
+            "icon": "note",
+            "foreground": "#00bfff",
+            "iconColour": "#00bfff"
+          }
+        }
+      },
+      "extensions": [
+        // recommendation
+        "ms-azuretools.vscode-docker",
+        "PKief.material-icon-theme",
+        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig",
+        "dbaeumer.vscode-eslint",
+        "oderwat.indent-rainbow",
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "Gruntfuggly.todo-tree"
+      ]
+    }
+  }
+}
