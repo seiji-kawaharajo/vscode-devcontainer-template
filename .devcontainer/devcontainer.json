@@ -1,5 +1,5 @@
 {
-  "name": "inimum configuration",
+  "name": "Minimum configuration",
   "image": "mcr.microsoft.com/devcontainers/base:alpine",
   "containerEnv": {
     "TZ": "Asia/Tokyo"
@@ -15,6 +15,9 @@
         "files.trimTrailingWhitespace": true,
         "editor.formatOnSave": true,
         "editor.formatOnPaste": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit"
+        },
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         // Todo Tree
         "todo-tree.general.tags": [
@@ -60,15 +63,19 @@
             "foreground": "#00bfff",
             "iconColour": "#00bfff"
           }
-        }
+        },
+        "todo-tree.filtering.excludeGlobs": [
+          "**/node_modules/*/**",
+          "README.md"
+        ]
       },
       "extensions": [
-        // recommendation
         "ms-azuretools.vscode-docker",
         "PKief.material-icon-theme",
         "esbenp.prettier-vscode",
         "EditorConfig.EditorConfig",
         "dbaeumer.vscode-eslint",
+        "RomanPeshkov.vscode-text-tables",
         "oderwat.indent-rainbow",
         "yzhang.markdown-all-in-one",
         "DavidAnson.vscode-markdownlint",
